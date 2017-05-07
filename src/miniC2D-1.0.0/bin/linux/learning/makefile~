@@ -1,0 +1,3 @@
+all:
+	g++ -g weight_learning.cpp -o weight_learner
+	g++ -g weight_learning_incomplete_data.cpp -o weight_learner_incomplete_data

@@ -1,0 +1,4 @@
+all:
+	g++ -g src/MLN_MAP.cpp -o bin/MAP/MAP_solver
+	g++ -g src/marg_inference_no_evidence.cpp -o bin/no_evidence_solver
+	g++ -g src/marg_inference_with_evidence.cpp -o bin/evidence_solver

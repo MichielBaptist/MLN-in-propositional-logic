@@ -1,0 +1,3 @@
+all:
+	g++ -g MLN_MAP.cpp -o MAP_solver
+	g++ -g marg_inference_no_evidence.cpp -o no_evidence_solver

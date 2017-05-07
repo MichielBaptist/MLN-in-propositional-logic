@@ -1,0 +1,39 @@
+This readme contains detailed instructions on how to use MARG exact inference, MAP inference 
+and parameter learning of Markov Logic Networks in propositional logic.
+
+MARG, MAP use an mln file as input and weight learning produces one as output. The general
+format of an mln file is the following:
+
+	-------------------------------------------------
+	|	<number of literals> <number of clauses>	|
+	|	weight1 <literals> 0						|
+	|	weight2 <literals> 0						|
+	|	...											|
+	-------------------------------------------------
+	
+	* The weight of the clauses may be any real number, and may be negative.
+
+	* The list of literals (<literals>) is a disjuntion of the literals.
+	  	-> e.g. a v b v c ...
+
+	* A literal is assumed to be an integer between 1 and the number of literals. 
+	  A literal may be negative.
+	  
+  	* A clause must always end in a 0.
+
+examples of MLN's can be found in the mln_samples folder.
+
+------------------------------------------------------------------------------------------------------
+1) MARG exact inference.
+
+MARG will calulate the probability of a literal of collection of literals, given a MLN file.
+Marg can be calculated as follows:
+	1) place an mln file in the bin/ folder. The mln file format is defined above and must be named "mln".
+	2) place a query file in the bin/ folder. This file must be named "query_atoms".
+		-> The query file format is as follows: <amount of query literals> <list of literals>
+		   The list of query literals is a conjunction of these literals.
+		   e.g. a ^ b ^ c ...
+	3) optional: place an evidence file in the bin/ folder. This file must be named "evidence".
+		-> The evidence file format is as follows: <amount of evidence literals> <list of literals>
+		   The list of literals is a conjunction.
+	4) run the solver by calling the "evidence_solver" or "no_evidence_solver".

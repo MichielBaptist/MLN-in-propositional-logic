@@ -1,0 +1,8 @@
+all:
+	g++ -g MLN_MAP.cpp -o MAP_solver
+	g++ -g marg_inference_no_evidence.cpp -o no_evidence_solver
+	g++ -g marg_inference_with_evidence.cpp -o evidence_solver
+	g++ -g weight_learning.cpp -o weight_learner
+	g++ -g weight_learning_incomplete_data.cpp -o weight_learner_incomplete_data
+	g++ -g test_generator.cpp -o test_generator
+	g++ -g test_generator2.cpp -o test_generator2
