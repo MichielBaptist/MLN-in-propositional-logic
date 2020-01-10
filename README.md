@@ -9,6 +9,9 @@ Markov Logic Networks in propositional logic. We explored MARG inference using W
 MAP inferenc using Weighted MaxSat and parameter learning using gradient descent. More about our research can be 
 found in the included paper (in Dutch).
 
+# Compiling
+Run ```make``` inside the directory.
+
 # Structure of an MLN file
 This readme contains detailed instructions on how to use MARG exact inference, MAP inference 
 and parameter learning of Markov Logic Networks in propositional logic.
